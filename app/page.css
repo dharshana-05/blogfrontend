@@ -1,0 +1,99 @@
+.homeWrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf7;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background: linear-gradient(to right, #fff5e1, #ffe3c9);
+  border-bottom: 2px solid #ffda9e;
+}
+
+.heroContent {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #2c2c2c;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #555;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f57c00;
+}
+
+.btnAlt {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+  border: 2px solid #ff9800;
+  border-radius: 6px;
+  color: #ff9800;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btnAlt:hover {
+  background-color: #ffecb3;
+}
+
+.heroImage {
+  border-radius: 12px;
+}
+
+.aboutPreview {
+  padding: 3rem;
+  text-align: center;
+  background-color: #fffdf4;
+}
+
+.aboutPreview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.aboutPreview p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fce6b6;
+  color: #555;
+  margin-top: 2rem;
+}
