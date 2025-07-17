@@ -44,7 +44,7 @@ export const blogData = [
   {
     id: '7',
     title: 'Rottweiler',
-    image: '/rottweiler.jpg',
+    image: '/Rottweiler.jpg',
     description:
       'Rottweilers are powerful and confident dogs with a natural guarding instinct. They are incredibly loyal and protective of their families. With proper socialization and training, they can be affectionate and obedient companions. Rottweilers require a strong leader and plenty of exercise to maintain their mental and physical health.',
   },
@@ -86,7 +86,7 @@ export const blogData = [
   {
     id: '13',
     title: 'Pomeranian',
-    image: '/pomeranian.jpg',
+    image: '/Pomeranian.jpg',
     description:
       'Pomeranians are tiny dogs with a bold personality. Despite their size, they are fearless, curious, and full of energy. Their fluffy coats and fox-like faces make them incredibly adorable. They are known to be vocal and make good watchdogs. Regular grooming and training from a young age are important to manage their confident and sometimes stubborn nature.',
   },
