@@ -8,7 +8,7 @@ export default function LoginPage() {
     if (role === 'admin') router.push('/logins');
     else router.push('/login');
   };
-
+  
   return (
     <div className="loginmain-container">
       <h1>Welcome to Pawspective Verse </h1>
