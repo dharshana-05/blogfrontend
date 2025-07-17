@@ -2,34 +2,27 @@
 
 import { useEffect, useState } from 'react';
 import { getBlogData, saveBlogData } from '../../lib/data';
-import '../../globals.css'; // or import './delete.css'; if using a separate CSS file
-
+import '../../globals.css'; 
 export default function DeleteBlogPage() {
   const [blogs, setBlogs] = useState([]);
   const [message, setMessage] = useState('');
-
   useEffect(() => {
     const data = getBlogData();
     const adminBlogs = data.filter(blog => Number(blog.id) > 15);
     setBlogs(adminBlogs);
   }, []);
-
   const handleDelete = (id) => {
     const allBlogs = getBlogData();
     const updated = allBlogs.filter(blog => blog.id !== id);
     const onlyAdminBlogs = updated.filter(blog => Number(blog.id) > 15);
-
     saveBlogData(onlyAdminBlogs);
     setBlogs(onlyAdminBlogs);
     setMessage('Blog deleted successfully!');
   };
-
   return (
     <div className="delete-form-container">
       <h2>List and Delete Admin Blogs</h2>
-
       {message && <p className="success-msg">{message}</p>}
-
       <div className="blog-list">
         {blogs.length === 0 ? (
           <p>No admin blogs to delete.</p>

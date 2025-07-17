@@ -1,6 +1,5 @@
 import '../../globals.css'; 
 import Link from 'next/link';
-
 const AdminHomePage = () => {
   return (
     <div className="admin-home-container">
@@ -19,5 +18,4 @@ const AdminHomePage = () => {
     </div>
   );
 };
-
 export default AdminHomePage;

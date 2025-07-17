@@ -1,19 +1,14 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { getBlogData, saveBlogData } from '../../lib/data';
-
+import { getBlogData } from '../../lib/data';
 import '../../globals.css';
-
 const UserHomePage = () => {
   const [blogs, setBlogs] = useState([]);
-
   useEffect(() => {
     const data = getBlogData(); 
     setBlogs(data);
   }, []);
-
   return (
     <main className="user-home-grid">
       {blogs.map((blog) => (
@@ -27,6 +22,5 @@ const UserHomePage = () => {
     </main>
   );
 };
-
 export default UserHomePage;
 

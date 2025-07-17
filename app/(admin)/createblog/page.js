@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { getBlogData, saveBlogData } from '../../lib/data';
 import '../../globals.css';
@@ -10,28 +9,22 @@ export default function CreateBlogPage() {
   const [content, setContent] = useState('');
   const [image, setImage] = useState('');
   const [message, setMessage] = useState('');
-
   const handleCreate = (e) => {
     e.preventDefault();
-
     const allBlogs = getBlogData();
     const exists = allBlogs.some(blog => blog.id === blogId);
-
     if (exists) {
       setMessage(` Blog ID "${blogId}" already exists. Try a different one.`);
       return;
     }
-
     const newBlog = {
       id: blogId,
       title,
       description: content,
       image: image || 'https://via.placeholder.com/600x300',
     };
-
     const onlyAdminBlogs = allBlogs.filter(blog => Number(blog.id) > 15);
     const updated = [...onlyAdminBlogs, newBlog];
-
     saveBlogData(updated);
     setMessage(` Blog "${title}" (ID: ${blogId}) created successfully!`);
 
@@ -41,7 +34,6 @@ export default function CreateBlogPage() {
     setContent('');
     setImage('');
   };
-
   return (
     <div className="form-container">
       <h2>Create New Blog (Manual ID)</h2>

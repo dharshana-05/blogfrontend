@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { getBlogData, saveBlogData } from '../../lib/data';
 import '../../globals.css';
-
 export default function UpdateBlogPage() {
   const [blogId, setBlogId] = useState('');
   const [newTitle, setNewTitle] = useState('');
@@ -11,20 +10,14 @@ export default function UpdateBlogPage() {
   const [newImage, setNewImage] = useState('');
   const [message, setMessage] = useState('');
   const [adminBlogs, setAdminBlogs] = useState([]);
-
-  useEffect(() => {
-    
+  useEffect(() => {    
     const allBlogs = getBlogData();
     const adminOnly = allBlogs.filter(blog => Number(blog.id) > 15);
     setAdminBlogs(adminOnly);
   }, []);
-
   const handleUpdate = (e) => {
     e.preventDefault();
-
-    const allBlogs = getBlogData();
-
-    
+    const allBlogs = getBlogData();    
     const updatedBlogs = allBlogs.map((blog) => {
       if (blog.id === blogId) {
         return {
@@ -35,9 +28,7 @@ export default function UpdateBlogPage() {
         };
       }
       return blog;
-    });
-
-    // Only store admin blogs in localStorage
+    });  
     const onlyAdminBlogs = updatedBlogs.filter(blog => Number(blog.id) > 15);
     saveBlogData(onlyAdminBlogs);
 
@@ -84,13 +75,9 @@ export default function UpdateBlogPage() {
           value={newImage}
           onChange={(e) => setNewImage(e.target.value)}
         />
-
         <button type="submit" className="admin-btn">Update Blog</button>
       </form>
-
       {message && <p className="success-msg">{message}</p>}
-
-      {/* Optional: Show all admin blogs for reference */}
       <div style={{ marginTop: '2rem' }}>
         <h3> Admin Blogs</h3>
         <ul>

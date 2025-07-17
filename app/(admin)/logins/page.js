@@ -5,10 +5,8 @@ export default function AdminLoginPage() {
   const [adminId, setAdminId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
   const handleAdminLogin = (e) => {
     e.preventDefault();
-
     if (adminId === 'admin123' && password === 'adminpass') {
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('role', 'admin');
@@ -19,7 +17,6 @@ export default function AdminLoginPage() {
       setError('Invalid admin credentials');
     }
   };
-
  return (
   <div className="admin-login-container">
     <h2>Admin Login</h2>
@@ -43,5 +40,4 @@ export default function AdminLoginPage() {
     </form>
   </div>
 );
-
 }

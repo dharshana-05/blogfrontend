@@ -1,14 +1,11 @@
 'use client';
 import { useState } from 'react';
-
 export default function UserLoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
   const handleLogin = (e) => {
     e.preventDefault();
-
     if (username === 'user123' && password === 'userpass') {
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('role', 'user');
@@ -19,7 +16,6 @@ export default function UserLoginPage() {
       setError('Invalid user credentials');
     }
   };
-
   return (
     <div className="login-container">
       <h2 className="login-title">User Login</h2>
