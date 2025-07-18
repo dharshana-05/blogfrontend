@@ -15,7 +15,7 @@ export default function Home() {
             <Link href="/loginmain">
               <button className="btn">Login</button>
             </Link>
-            <Link href="/loginmain">
+            <Link href="/home">
               <button className="btnAlt">View Blogs</button>
             </Link>
           </div>
